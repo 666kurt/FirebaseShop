@@ -14,10 +14,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct FirebaseShopApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var vm = ShopViewModel.shared
     
     var body: some Scene {
         WindowGroup {
             ShopScreen()
+                .environmentObject(vm)
         }
     }
 }

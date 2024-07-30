@@ -6,6 +6,7 @@ struct ShopScreen: View {
     
     // MARK: - properties
     @FirestoreQuery(collectionPath: "shop") var items: [Product]
+    @EnvironmentObject var vm: ShopViewModel
     let columns = Array(repeating: GridItem(), count: 2)
     
     // MARK: - body
@@ -14,10 +15,15 @@ struct ShopScreen: View {
             ScrollView(.vertical) {
                 LazyVGrid(columns: columns) {
                     ForEach(items) { item in
-                        Text(item.name)
+                        ProductCartView(product: item)
                     }
                 }
             }
+            .scrollIndicators(.hidden)
+            .padding(.horizontal)
+            .background(.secondary.opacity(0.2))
+            
+            // MARK: - navbar
             .navigationTitle("Shop")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -42,4 +48,5 @@ struct ShopScreen: View {
 
 #Preview {
     ShopScreen()
+        .environmentObject(ShopViewModel.shared)
 }

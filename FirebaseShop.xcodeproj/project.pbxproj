@@ -21,6 +21,10 @@
 		FC32DC372C582300008E289B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FC32DC362C582300008E289B /* FirebaseFirestoreSwift */; };
 		FC32DC392C58251D008E289B /* CartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC32DC382C58251D008E289B /* CartScreen.swift */; };
 		FC32DC3B2C58253D008E289B /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC32DC3A2C58253D008E289B /* FavoritesScreen.swift */; };
+		FC32DC3D2C58F5A1008E289B /* ProductCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC32DC3C2C58F5A1008E289B /* ProductCartView.swift */; };
+		FC32DC3F2C58F91A008E289B /* CartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC32DC3E2C58F91A008E289B /* CartImageView.swift */; };
+		FC32DC412C58FD3A008E289B /* Text+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC32DC402C58FD39008E289B /* Text+extension.swift */; };
+		FCCF317E2C5973D8001AB18C /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCF317D2C5973D8001AB18C /* ShopViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		FC32DC332C581CC2008E289B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FC32DC382C58251D008E289B /* CartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartScreen.swift; sourceTree = "<group>"; };
 		FC32DC3A2C58253D008E289B /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
+		FC32DC3C2C58F5A1008E289B /* ProductCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartView.swift; sourceTree = "<group>"; };
+		FC32DC3E2C58F91A008E289B /* CartImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartImageView.swift; sourceTree = "<group>"; };
+		FC32DC402C58FD39008E289B /* Text+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+extension.swift"; sourceTree = "<group>"; };
+		FCCF317D2C5973D8001AB18C /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,14 +80,14 @@
 		FC32DC172C581AB1008E289B /* FirebaseShop */ = {
 			isa = PBXGroup;
 			children = (
+				FC32DC1C2C581AB3008E289B /* Assets.xcassets */,
 				FC32DC262C581B1F008E289B /* GoogleService-Info.plist */,
 				FC32DC182C581AB1008E289B /* FirebaseShopApp.swift */,
-				FC32DC1A2C581AB1008E289B /* ShopScreen.swift */,
-				FC32DC1C2C581AB3008E289B /* Assets.xcassets */,
+				FC32DC4C2C5901DB008E289B /* Modules */,
+				FCCF317C2C5973C0001AB18C /* ViewModel */,
+				FC32DC492C5901B3008E289B /* Model */,
+				FC32DC4A2C5901BE008E289B /* Extensions */,
 				FC32DC1E2C581AB3008E289B /* Preview Content */,
-				FC32DC332C581CC2008E289B /* Product.swift */,
-				FC32DC382C58251D008E289B /* CartScreen.swift */,
-				FC32DC3A2C58253D008E289B /* FavoritesScreen.swift */,
 			);
 			path = FirebaseShop;
 			sourceTree = "<group>";
@@ -97,6 +105,90 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC32DC422C590157008E289B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC32DC3A2C58253D008E289B /* FavoritesScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC32DC442C590168008E289B /* FavoritesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC32DC422C590157008E289B /* View */,
+			);
+			path = FavoritesScreen;
+			sourceTree = "<group>";
+		};
+		FC32DC452C59017C008E289B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC32DC382C58251D008E289B /* CartScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC32DC462C590182008E289B /* CartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC32DC452C59017C008E289B /* View */,
+			);
+			path = CartScreen;
+			sourceTree = "<group>";
+		};
+		FC32DC472C590196008E289B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC32DC3C2C58F5A1008E289B /* ProductCartView.swift */,
+				FC32DC3E2C58F91A008E289B /* CartImageView.swift */,
+				FC32DC1A2C581AB1008E289B /* ShopScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC32DC482C5901A0008E289B /* ShopScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FC32DC472C590196008E289B /* View */,
+			);
+			path = ShopScreen;
+			sourceTree = "<group>";
+		};
+		FC32DC492C5901B3008E289B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC32DC332C581CC2008E289B /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC32DC4A2C5901BE008E289B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC32DC402C58FD39008E289B /* Text+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC32DC4C2C5901DB008E289B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FC32DC482C5901A0008E289B /* ShopScreen */,
+				FC32DC462C590182008E289B /* CartScreen */,
+				FC32DC442C590168008E289B /* FavoritesScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FCCF317C2C5973C0001AB18C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCCF317D2C5973D8001AB18C /* ShopViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +277,11 @@
 				FC32DC392C58251D008E289B /* CartScreen.swift in Sources */,
 				FC32DC3B2C58253D008E289B /* FavoritesScreen.swift in Sources */,
 				FC32DC192C581AB1008E289B /* FirebaseShopApp.swift in Sources */,
+				FC32DC412C58FD3A008E289B /* Text+extension.swift in Sources */,
+				FC32DC3D2C58F5A1008E289B /* ProductCartView.swift in Sources */,
+				FC32DC3F2C58F91A008E289B /* CartImageView.swift in Sources */,
 				FC32DC342C581CC2008E289B /* Product.swift in Sources */,
+				FCCF317E2C5973D8001AB18C /* ShopViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
